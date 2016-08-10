@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //var iframe = document.createElement("iframe");
+            //iframe.src = "CheckUserState.htm";
+
+            //if (iframe.attachEvent) {
+            //    iframe.attachEvent("onload", function () {
+            //        alert("Local iframe is now loaded.");
+            //    });
+            //} else {
+            //    iframe.onload = function () {
+            //        alert("Local iframe is now loaded.");
+            //    };
+            //}
+
+
+            if (window.frames["checkframe"].document.readyState == "complete") {
+                checkframe.contentWindow.startcheck();
+
+                //var checkframe = window.frames["checkframe"];
+                //checkframe.startcheck();
+                //checkframe.stopcheck();
+            }
+
+
+           // $("iframe#checkframe").load(function () {
+               
+           // })
+        });
+        function btnClick() {
+            window.frames["checkframe"].startcheck();
+        }
+    </script>
+</head>
+<body>
+    <div>main.html</div>
+    <hr />
+    <button onclick='window.frames["checkframe"].startcheck();'>调用子frame---好使</button>
+    <button onclick='btnClick()'>调用子frame-</button>
+    <iframe name="checkframe" src="CheckUserState.htm"></iframe>
+</body>
+</html>

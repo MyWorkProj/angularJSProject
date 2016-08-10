@@ -1,0 +1,592 @@
+﻿
+.addchat_searchicon {
+	background: url(/assets/img/spriteim.png) 0 0;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.ChatListBanner_Close {
+	background: url(/assets/img/spriteim.png) 0 -30px;
+	width: 11px;
+	height: 11px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.dialogs_close_btn {
+	background: url(/assets/img/spriteim.png) 0 -41px;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_chat {
+	background: url(/assets/img/spriteim.png) 0 -66px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_copylink {
+	background: url(/assets/img/spriteim.png) 0 -100px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_feedback {
+	background: url(/assets/img/spriteim.png) 0 -134px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_newtab {
+	background: url(/assets/img/spriteim.png) 0 -168px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_push_off {
+	background: url(/assets/img/spriteim.png) 0 -202px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_push_on {
+	background: url(/assets/img/spriteim.png) 0 -236px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_quit {
+	background: url(/assets/img/spriteim.png) 0 -270px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_volume_mute {
+	background: url(/assets/img/spriteim.png) 0 -304px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.menuicon_volume_on {
+	background: url(/assets/img/spriteim.png) 0 -338px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.titlebar_menuicon {
+	background: url(/assets/img/spriteim.png) 0 -372px;
+	width: 34px;
+	height: 34px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_add {
+	background: url(/assets/img/spriteim.png) 0 -406px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_addfriend {
+	background: url(/assets/img/spriteim.png) 0 -436px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_add_friends {
+	background: url(/assets/img/spriteim.png) 0 -466px;
+	width: 55px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_choose_green {
+	background: url(/assets/img/spriteim.png) 0 -521px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_choose_grey {
+	background: url(/assets/img/spriteim.png) 0 -541px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_choose_wireframe {
+	background: url(/assets/img/spriteim.png) 0 -561px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_close-tips {
+	background: url(/assets/img/spriteim.png) 0 -581px;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_close-window {
+	background: url(/assets/img/spriteim.png) 0 -606px;
+	width: 55px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_delete {
+	background: url(/assets/img/spriteim.png) 0 -661px;
+	width: 19px;
+	height: 19px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_delete_friends {
+	background: url(/assets/img/spriteim.png) 0 -680px;
+	width: 55px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_download {
+	background: url(/assets/img/spriteim.png) 0 -735px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_down_icon {
+	background: url(/assets/img/spriteim.png) 0 -795px;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_face {
+	background: url(/assets/img/spriteim.png) 0 -805px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_file {
+	background: url(/assets/img/spriteim.png) 0 -835px;
+	width: 76px;
+	height: 76px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_folder {
+	background: url(/assets/img/spriteim.png) 0 -911px;
+	width: 76px;
+	height: 76px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_left {
+	background: url(/assets/img/spriteim.png) 0 -987px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_left_disable {
+	background: url(/assets/img/spriteim.png) 0 -1047px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_login_logo {
+	background: url(/assets/img/spriteim.png) 0 -1107px;
+	width: 36px;
+	height: 28px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_login_phone_icon {
+	background: url(/assets/img/spriteim.png) 0 -1135px;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_login_scan_icon {
+	background: url(/assets/img/spriteim.png) 0 -1167px;
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_logo {
+	background: url(/assets/img/spriteim.png) 0 -1199px;
+	width: 65px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_men {
+	background: url(/assets/img/spriteim.png) 0 -1254px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_message_fail {
+	background: url(/assets/img/spriteim.png) 0 -1270px;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_no-remind {
+	background: url(/assets/img/spriteim.png) 0 -1292px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_no-remind_hl {
+	background: url(/assets/img/spriteim.png) 0 -1312px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_nomes_icon {
+	background: url(/assets/img/spriteim.png) 0 -1332px;
+	width: 100px;
+	height: 90px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_noread {
+	background: url(/assets/img/spriteim.png) 0 -1422px;
+	width: 11px;
+	height: 11px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_no_contect {
+	background: url(/assets/img/spriteim.png) 0 -1433px;
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_paly {
+	background: url(/assets/img/spriteim.png) 0 -1583px;
+	width: 55px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_pic {
+	background: url(/assets/img/spriteim.png) 0 -1638px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_profile_loc {
+	background: url(/assets/img/spriteim.png) 0 -1668px;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_redbag {
+	background: url(/assets/img/spriteim.png) 0 -1686px;
+	width: 45px;
+	height: 50px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_reddot {
+	background: url(/assets/img/spriteim.png) 0 -1736px;
+	width: 12px;
+	height: 12px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_reddot_bbig {
+	background: url(/assets/img/spriteim.png) 0 -1748px;
+	width: 29px;
+	height: 16px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_reddot_big {
+	background: url(/assets/img/spriteim.png) 0 -1764px;
+	width: 22px;
+	height: 16px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_reddot_middle {
+	background: url(/assets/img/spriteim.png) 0 -1780px;
+	width: 22px;
+	height: 16px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_right {
+	background: url(/assets/img/spriteim.png) 0 -1796px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_right_disable {
+	background: url(/assets/img/spriteim.png) 0 -1856px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_screencut {
+	background: url(/assets/img/spriteim.png) 0 -1916px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_search {
+	background: url(/assets/img/spriteim.png) 0 -1946px;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_send {
+	background: url(/assets/img/spriteim.png) 0 -1976px;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_send_w {
+	background: url(/assets/img/spriteim.png) 0 -2001px;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_add {
+	background: url(/assets/img/spriteim.png) 0 -2026px;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_chat {
+	background: url(/assets/img/spriteim.png) 0 -2048px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_chat_hl {
+	background: url(/assets/img/spriteim.png) 0 -2083px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_close {
+	background: url(/assets/img/spriteim.png) 0 -2118px;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_friends {
+	background: url(/assets/img/spriteim.png) 0 -2140px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_friends_hl {
+	background: url(/assets/img/spriteim.png) 0 -2175px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_launch-chat {
+	background: url(/assets/img/spriteim.png) 0 -2210px;
+	width: 22px;
+	height: 22px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_public {
+	background: url(/assets/img/spriteim.png) 0 -2232px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_tab_public_hl {
+	background: url(/assets/img/spriteim.png) 0 -2267px;
+	width: 35px;
+	height: 35px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_turn {
+	background: url(/assets/img/spriteim.png) 0 -2302px;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_up_icon {
+	background: url(/assets/img/spriteim.png) 0 -2362px;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_vdeio {
+	background: url(/assets/img/spriteim.png) 0 -2372px;
+	width: 55px;
+	height: 55px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_voice_gray {
+	background: url(/assets/img/spriteim.png) 0 -2427px;
+	width: 23px;
+	height: 23px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_voice_green {
+	background: url(/assets/img/spriteim.png) 0 -2450px;
+	width: 23px;
+	height: 23px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_women {
+	background: url(/assets/img/spriteim.png) 0 -2473px;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_voice_playing {
+	background: url(/assets/img/web_wechat_voice_playing28a2f7.gif);
+	width: 23px;
+	height: 23px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_voice_gray_playing {
+	background: url(/assets/img/web_wechat_voice_gray_playing1.gif);
+	width: 23px;
+	height: 23px;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.web_wechat_file {
+	background: url(/assets/img/spriteim.png)  0 -835px;
+    width: 76px;
+    height: 76px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.web_wechat_folder {
+	background: url(/assets/img/spriteim.png) 0 -911px;
+    width: 76px;
+    height: 76px;
+    vertical-align: middle;
+    display: inline-block;
+}

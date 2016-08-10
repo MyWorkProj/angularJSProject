@@ -1,0 +1,14 @@
+﻿[
+    {
+        "id": "1",
+        "imageUrl": "/phones/p1.jpg",
+		"snippet": "Fast just got faster with Nexus S.",
+        "name": "picture1"
+    },
+    {
+        "id": "2",
+        "imageUrl": "/phones/p2.jpg",
+		"snippet": "The Next, Next Generation tablet.",
+        "name": "picture2"
+    }
+]

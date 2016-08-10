@@ -1,0 +1,1 @@
+E:\vs2013Project\angularJSProj\Blog\obj\Debug\Blog.csprojResolveAssemblyReference.cache

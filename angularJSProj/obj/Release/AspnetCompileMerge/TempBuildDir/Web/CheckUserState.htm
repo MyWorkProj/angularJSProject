@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>222222222222222</title>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        var se = null;
+        function startcheck() { se = setInterval("Refresh()", 3000); } //这句已经过更新
+        function stopcheck() { clearInterval(se); se = null; }
+
+        var agentlist;
+        var agentname = "";
+        function Refresh() {
+            alert("=====refresh====");
+
+            //var obj = new Object();
+            //obj.agentname = agentname;
+            //var param = JSON2.stringify(obj);
+            //$.ajax({
+            //    type: "POST",
+            //    contentType: "application/json",
+            //    url: "../AjaxService/AjaxReportService.asmx/GetALLUserAndACDStatus",
+            //    data: param,
+            //    dataType: 'json', //返回的类型为XML ，和前面的Json，不一样了
+            //    success: function (result) {
+            //        if ($(result).get(0).d != "") {
+            //            var jsonDatas = window.parent.strToJson($(result).get(0).d);
+            //            for (var k = 0; k < agentlist.length; k++) {
+            //                window.parent.RefreshAgentStatus(agentlist[k], jsonDatas);
+            //            }
+            //            window.parent.SetAgentState(jsonDatas);
+            //        }
+            //    }
+            //});
+        }
+    </script>
+</head>
+<body>
+    <div>ifream</div>
+    <button>点击按钮</button>
+</body>
+</html>

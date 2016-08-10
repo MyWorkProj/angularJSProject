@@ -1,0 +1,42 @@
+﻿@using Webdiyer.WebControls.Mvc
+
+@model MvcProj.Models.userinfotb
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>create</title>
+    @*<link href="@Url.Content("~/Content/login.css")" rel="stylesheet" />*@
+</head>
+<body>
+    <form action="/User/Create" method="post" id="form">
+        <div>
+            <table>
+                <tr>
+                    <th>姓名：</th>
+                    <td>@Html.TextBoxFor(model => Model.name)</td>
+                </tr>
+                <tr>
+                    <th>地址：</th>
+                    <td>@Html.TextBoxFor(model => Model.adress)</td>
+                </tr>
+                <tr>
+                    <th>年龄：</th>
+                    <td>@Html.TextBoxFor(model => Model.age)</td>
+                </tr>
+                <tr>
+                    <th>电话号码：</th>
+                    <td>@Html.TextBoxFor(model => Model.phone)</td>
+                </tr>
+            </table>
+            <button type="submit" id="btnSubmit">提交</button>
+        </div>
+
+    </form>
+</body>
+</html>

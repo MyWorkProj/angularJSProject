@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+</head>
+<body>
+
+    <script src="../Scripts/jquery-1.6.4.js"></script>
+    <!--<script>
+        //发起呼叫
+        function Btncall_onclick() {
+            var localid = 1;// EditCalled.value;
+            var json = 'id='+ localid;
+            var url = "http://api.lnlcc.com/CMCC.asmx/GetMobileByID";
+
+            $.ajax({
+                type: "Post",
+                data: json,
+                contentType: "application/json",
+                url: url,
+                dataType: 'jsonp',
+                callback:aaa,
+                success: function (result) {
+                    if (result.d != null) {
+                        alert("===result.d====:" + result);
+                    }
+                },
+                error: function () {
+                    alert("update  failed!");
+                }
+            });
+        }
+        function aaa() {
+            alert("=======1=============");
+
+        }
+
+
+
+    </script>-->
+    <script type="text/javascript">
+        function jsonpCallback(result) {
+            //alert(result);
+            for (var i in result) {
+                alert(i + ":" + result[i]);//循环输出a:1,b:2,etc.
+            }
+        }
+        function aaa() {
+            alert("=======1=============");
+
+        }
+
+        //$(document).ready(function () {
+        //    var JSONP = document.createElement("script");
+        //    JSONP.type = "text/javascript";
+        //    JSONP.src = "http://api.lnlcc.com/CMCC.asmx/GetMobileByID?id=1";
+        //    document.getElementsByTagName("head")[0].appendChild(JSONP);
+        //});
+        function UserLogin() {
+            $.ajax({
+                type: "POST",
+                //   contentType: "application/json",
+                //url: "http://api.lnlcc.com/CMCC.asmx/GetMobileByID",
+                url: "./Services/GetPhoneByID.asmx/GetPhoneNum",
+                data: {ID:1},
+                dataType: 'TEXT',
+                success: function (result) {
+                    alert("success:==="+ result);
+                    //try {
+                    //    var rd = $(result).find("int")[0].textContent;
+                    //    window.parent.LinkPhoneCallBack.OnLine(rd);
+                    //    if (rd == "0") {
+                    //        window.parent.LinkPhoneCallBack.ChangeAgentStateText("上线成功");
+                    //    }
+                    //    else {
+                    //        window.parent.LinkPhoneCallBack.ChangeAgentStateText("上线失败");
+                    //    }
+                    //}
+                    //catch (e) {
+                    //    //             alert(e);
+                    //    return;
+                    //}
+                },
+                error: function (result, status) {
+                    alert("failed");
+                    //if (status == 'error') {
+                    //    //            alert(status);
+                    //}
+                }
+            });
+        }
+
+        function aa() {
+
+            $.ajax({
+                type: "POST",
+                url: "http://api.lnlcc.com/CMCC.asmx/GetMobileByID",
+                data: { ID: 1 },
+                dataType: 'TEXT',
+                success: function (result) {
+                    try {
+                        alert(result);
+
+
+                    }
+                    catch (e) {
+                        //             alert(e);
+                        return;
+                    }
+                },
+                error: function (result, status) {
+                    if (status == 'error') {
+                        //        alert(status);
+                    }
+                }
+            });
+        }
+        function ajaxTest() {
+            var aa = ggg();
+            alert("值为：======="+aa);
+        }
+        function ajaxTest2(result) {
+            alert("ajax success:====ajaxTest2===============" + $(result).find("anyType").text());
+        }
+        function ajaxCallBack() {
+            $.ajax({
+                type: "POST",
+                url: "http://client.lnlcc.com/agent/AgentService.asmx/CheckTalkFileByRecorderId",
+                data: { agentname: 'kehuduijie3', agentpasswd: 'kehuduijie3', recorderid: '201605301046291013734@114.112.96.105', callback: 'ajaxTest2'},
+                dataType: 'xml',
+                jsonp: 'ajaxTest2',
+                
+                //success: function (result) {
+                //    alert("ajax success:===================" + $(result).find("anyType").text());
+                //    gg = $(result).find("anyType").text();
+                //},
+                error: function (result, status) {
+                    gg = "failed";
+                }
+            });
+        }
+
+        function ggg() {
+            var gg = "default";
+            $.ajax({
+                type: "POST",
+                url: "http://client.lnlcc.com/agent/AgentService.asmx/CheckTalkFileByRecorderId",
+                data: { agentname: 'kehuduijie3', agentpasswd: 'kehuduijie3', recorderid: '201605301046291013734@114.112.96.105' },
+                dataType: 'xml',
+                async:false,
+                success: function (result) {
+                    alert("ajax success:===================" + $(result).find("anyType").text());
+                    gg = $(result).find("anyType").text();
+                },
+                error: function (result, status) {
+                    gg = "failed";
+                }
+            });
+            return gg;
+        }
+        function GetRecorderId() {
+            $.ajax({
+                type: "POST",
+                url: "http://client.lnlcc.com/agent/AgentService.asmx/CheckTalkFileByRecorderId",
+                data: { agentname: 'kehuduijie3', agentpasswd: 'kehuduijie3', recorderid: '201605301046291013734@114.112.96.105' },
+                dataType: 'xml',
+                success: function (result) {
+
+                    alert("success:===" + $(result).find("anyType").text());
+                },
+                error: function (result, status) {
+                    alert("failed");
+                }
+            });
+        }
+
+        //获取两个,之间的内容
+        function GetRex(str) {
+            var reg = /.*,(.*wav)/;     
+            var array = reg.exec(str);
+            alert("显示结果：" + array[1]);
+            return array[1];
+        }
+
+        // str : 20160530_1_1013734.wav
+        function ReplaceNum2Phone(str) {
+            var reg = /_(.*)_/;
+            var array = reg.exec(str);
+            var  phoneNum = array[1];
+            
+            $.ajax({
+                type: "POST",
+                url: "http://api.lnlcc.com/CMCC.asmx/GetMobileByID",
+                data: { ID: phoneNum },
+                dataType: 'TEXT',
+                success: function (result) {
+                    try {
+                        var cPhone = "_"+result+"_";
+
+                        alert(str.replace(reg, cPhone));
+                        return str.replace(reg, cPhone);
+                    }
+                    catch (e) {
+                        //             alert(e);
+                        return "function ReplaceNum2Phone()  ajax error ：" + e;
+                    }
+                },
+                error: function (result, status) {
+                    if (status == 'error') {
+                        //        alert(status);
+                        return "error:function ReplaceNum2Phone()  ajax error";
+                    }
+                }
+            });
+        }
+
+        // str : 20160530_018513557174_1013734.wav
+        function ReplacePhone2Num(str) {
+            var reg = /_(.*)_/;
+            var array = reg.exec(str);
+            //alert("显示结果：" + array[1]);
+            
+            var phone = array[1];
+            phone = phone.substr(1, phone.length - 1);
+            //alert("phone:" + phone);
+            var cNum = "_1_";
+
+            //alert(str.replace(reg, cNum));
+
+            return str.replace(reg, cNum);
+        }
+
+
+        function CheckTalkFileByRecorderId(recorderid) {
+            if (recorderid == null || recorderid == undefined) {
+                recorderid = "201605301046291013734@114.112.96.105";
+            }
+            var url = "http://client.lnlcc.com/agent/AgentService.asmx/CheckTalkFileByRecorderId";
+            var aname = "kehuduijie3";
+            var apwd = "kehuduijie3";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: { agentname: aname, agentpasswd:apwd, recorderid: recorderid },
+                dataType: 'TEXT',
+                success: function (result) {
+                    //alert("success:===" + $(result).find("anyType").text());
+                    return $(result).find("anyType").text();
+                },
+                error: function (result, status) {
+                    //alert("failed");
+
+                    return "error : function CheckTalkFileByRecorderId() ajax error ";
+                }
+            });
+        }
+
+        
+        // swavName : 20160530_018513557174_1013734.wav
+        function RecAdd(swavName) {
+            if (swavName == null || swavName == undefined) {
+                swavName = "20160530_018513557174_1013734.wav";
+            }
+            
+            var prePath = "http://114.112.96.108:8090/recordfile/";
+            var dataPath = swavName.substr(0, 8);
+            var cwavName = ReplacePhone2Num(swavName);
+            var id = 1;
+            // http://114.112.96.108:8090/recordfile/20160530/20160530_018513557174_1013734.wav 
+            //var surl = prePath + dataPath + "/" + swavName;
+            //var curl = prePath + dataPath + "/" + cwavName;
+            var surl = swavName;
+            var curl = cwavName;
+
+            //$.ajax({
+            //    type: "post",
+            //    url: "http://api.lnlcc.com/cmcc.asmx/recadd",
+            //    data: { id: 1 ,surl:'',curl:''},
+            //    datatype: 'text',
+            //    success: function (result) {
+            //        alert("success:===" + result);
+            //    },
+            //    error: function (result, status) {
+            //        alert("failed");
+            //    }
+            //});
+
+            return "T";
+        }
+
+        function Run(recorderid) {
+            if (recorderid == null || recorderid == undefined) {
+                recorderid = "201605301046291013734@114.112.96.105";
+            }
+            var url = "http://client.lnlcc.com/agent/AgentService.asmx/CheckTalkFileByRecorderId";
+            var aname = "kehuduijie3";
+            var apwd = "kehuduijie3";
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: { agentname: aname, agentpasswd: apwd, recorderid: recorderid },
+                dataType: 'TEXT',
+                success: function (result) {
+                    //alert("success:===" + $(result).find("anyType").text());
+                    var talkFile = $(result).find("anyType").text();
+
+                    var reg = /.*,(.*wav)/;
+                    var array = reg.exec(talkFile);
+
+                    swavName = array[1];
+                    if (swavName == null || swavName == undefined) {
+                        swavName = "20160530_018513557174_1013734.wav";
+                    }
+
+                    var prePath = "http://114.112.96.108:8090/recordfile/";
+                    var dataPath = swavName.substr(0, 8);
+                    var cwavName = ReplacePhone2Num(swavName);
+                    var id = 1;
+                    // http://114.112.96.108:8090/recordfile/20160530/20160530_018513557174_1013734.wav 
+                    var surl = prePath + dataPath + "/" + swavName;// 20160530_018513557174_1013734.wav";
+                    var curl = prePath + dataPath + "/" + cwavName;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "http://api.lnlcc.com/CMCC.asmx/RecAdd",
+                        data: { ID: 1, Surl: surl, Curl: curl },
+                        dataType: 'TEXT',
+                        success: function (result) {
+                            alert("success:===" + result);
+                        },
+                        error: function (result, status) {
+                            alert("failed");
+                        }
+                    });
+
+                    return "T";
+
+                },
+                error: function (result, status) {
+                    //alert("failed");
+
+                    return "error : function CheckTalkFileByRecorderId() ajax error ";
+                }
+            });
+            
+            //var wavFileName = GetRex(talkFile);
+            //var add = RecAdd(wavFileName);
+            //alert(add);
+        }
+    </script>
+    <button onclick="UserLogin()">
+        点击
+    </button>
+
+    <button onclick="aa()">
+        点击2222
+    </button>
+
+    <button onclick="GetRecorderId()">
+        点击GetRecorderId
+    </button>
+    <button onclick="GetRex('2016/5/30 10:43:24,2,1492,018513557174,4,20160530_018513557174_1013734.wav,,0,1492,,2016/5/30 10:46:40,1')">
+        点击GetRex
+    </button>
+    <button onclick="ReplaceNum2Phone('20160530_1_1013734.wav')">
+        点击ReplaceNum2Phone
+    </button>
+    <button onclick="ReplacePhone2Num('20160530_018513557174_1013734.wav')">
+        点击ReplacePhone2Num
+    </button>
+
+    <button onclick="CheckTalkFileByRecorderId()">
+        点击CheckTalkFileByRecorderId
+    </button>
+
+    <button onclick="RecAdd()">
+        点击RecAdd
+    </button>
+    <hr />
+    <button onclick="Run()">
+        点击Run
+    </button>
+
+    <button onclick="ajaxTest()">
+        点击ajaxTest
+    </button>
+    <button onclick="ajaxCallBack()">
+        点击ajaxCallBack
+    </button>
+</body>
+</html>

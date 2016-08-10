@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <style>
+        .a {
+            background-color: blue;
+        }
+
+        .b {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <img class="imgClass" src="../%e6%89%93%e8%b5%8f/img/weixinqr3.png" id="img" width="60" height="60"/>
+    <img class="imgClass" src="../%e6%89%93%e8%b5%8f/img/alipayqr.png" width="60" height="60" />
+    <img class="imgClass" src="../%e6%89%93%e8%b5%8f/img/border.jpg" width="60" height="60" />
+    <button id="btn" onclick="btn()" style="display:initial">点击切换背景色</button>
+    <button onclick="btn()">点击</button>
+    <button onclick="btn2()" id="btn2">点击</button>
+
+    <input title="1111" value="请输入内容" id="txt1" />
+    <button onclick="btn3()">输出输入内容</button>
+
+    <select id="sel" multiple="multiple">
+        <option selected="selected">1</option>
+        <option>2</option>
+        <option selected="selected">3</option>
+        <option>4</option>
+    </select>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=417859631&auto=0&height=66"></iframe>
+
+
+    <script src="../../JS/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        function btn() {
+            $('#btn').toggle(function () {	//toggle()：交替执行
+                //$('#btn').css('display', 'initial');
+                $('#btn').css('background-color', 'Red');
+            }
+            );
+        }
+
+        function btn2() {
+            $('#btn2').toggleClass("a");
+        }
+
+        function btn3() {
+            // 下拉多选框框   赋单值
+            //$('#sel').val("4");
+            // 下拉多选框框   赋多值（数组）
+            $('#sel').val(["1","4"]);
+
+
+            //$('#txt1').focus(function () {
+            //    var txtValue = $(this).val();
+            //    if (txtValue == "请输入内容") {
+            //        alert("麻溜的输入！");
+            //    }
+            //    else {
+            //        alert("输入内容为：" + txtValue);
+            //    }
+            //});
+        }
+        testVal = "global";
+        //var arr = ['a', 'aa', 'ccc', 'ddd'];
+        var arr = {
+            aa: 1,
+            bb: 2,
+            cc: 3,
+            dd:4
+        }
+        function globalFunc() {
+            //var testVal;
+            //alert("global:" + testVal);
+            //testVal = "partial";
+            //alert("global:" + testVal);
+
+            // 循环中变量
+            //for (var i = 0, max = arr.length ; i < max; i++) {
+            //    console.log(arr[i]);
+            //}
+
+            
+            // 不做过滤
+            for (var i in arr) {
+                console.log(i, "", arr[i]);
+            }
+            console.log("==============================");
+            // 过滤原型属性
+            for (var i in arr) {
+                if (arr.hasOwnProperty(i)) {
+                    console.log(i,"",arr[i]);
+                }
+
+            }
+            
+        }
+
+        function makeCount() {
+            var i = 0;
+            return function () {
+                console.log(++i);
+            }
+        }
+
+        $(document).ready(function () {
+
+            var count = makeCount();
+            count();
+            count();
+            var count2 = makeCount();
+            count2();
+            count2();
+
+
+            $('#txt1').focus(function () {
+                var txtValue = $(this).val();
+                if (txtValue == "请输入内容") {
+                    $(this).val("");
+                }
+                else {
+                    alert("输入内容为：" + txtValue);
+                }
+            });
+
+            $('#txt1').blur(function () {
+                var txtValue = $(this).val();
+                if (txtValue == "") {
+                    $(this).val("请输入内容");
+                }
+                else {
+                    alert("输入内容为：" + txtValue);
+                }
+            });
+
+
+            // 图片大缩略图
+            $('.imgClass').mouseover(function (e) {
+                var div = "<div id='div'><img src='"+this.src+"' alt='==========='></div>";
+                $("body").append(div);
+
+                $('#div')
+                    .css({
+                        "top": (e.pageY + 100 )+ "px",
+                        "left":(e.pageX+100)+"px"
+                }).show("fast");
+            }).mouseout(function () {
+                $('div').remove();
+            });
+
+            ////globalFunc();
+            //var f = function () {
+            //    console.log(1);
+            //}
+            //var g = function () {
+            //    console.log("3");
+            //}
+            //if (false) {
+            //    f = function g() {
+            //        console.log( 2);
+            //    }
+            //}
+
+            //g();
+            //var blogModel = (function (my) {
+            //    my.name = "default name ";
+            //    my.Add = function () {
+            //        alert("==add==:" + my.name);
+            //    }
+            //    return my;
+            //})(bolgModel || {});
+
+
+            //blogModel.name = "new  name";
+            //blogModel.Add();
+           
+        });
+        
+        
+    </script>
+</body>
+</html>

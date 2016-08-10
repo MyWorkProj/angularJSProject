@@ -1,0 +1,45 @@
+﻿@using Webdiyer.WebControls.Mvc
+
+@model List<MvcProj.Models.userinfotb>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>user列表</title>
+    @*<link href="@Url.Content("~/Content/login.css")" rel="stylesheet" />*@
+</head>
+<body>
+    <div>
+        <button onclick="Add()">添加</button>
+        <a href="/user/Create">添加aaaaaa</a>
+
+        <table>
+            <tr>
+                <th>姓名：</th><th>地址：</th><th>年龄：</th><th>电话号码：</th>
+                
+            </tr>
+            @Html.Partial("_ListItem", Model)
+
+           @*@foreach (var model in Model)
+            {
+                <tr>
+                    <td>@Html.TextBoxFor(model1 => model.name)</td>
+                    <td>@Html.TextBoxFor(model1 => model.adress)</td>
+                    <td>@Html.TextBoxFor(model1 => model.age)</td>
+                    <td>@Html.TextBoxFor(model1 => model.phone)</td>
+                </tr>
+            }*@
+        </table>
+    </div>
+    <script type="text/javascript">
+        function Add() {
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+E:\vs2013Project\angularJSProj\WebService\bin\WebService.dll.config
+E:\vs2013Project\angularJSProj\WebService\bin\WebService.dll
+E:\vs2013Project\angularJSProj\WebService\bin\WebService.pdb
+E:\vs2013Project\angularJSProj\WebService\obj\Release\WebService.dll
+E:\vs2013Project\angularJSProj\WebService\obj\Release\WebService.pdb
+E:\vs2013Project\angularJSProj\WebService\obj\Release\WebService.csprojResolveAssemblyReference.cache
+E:\vs2013Project\angularJSProj\WebService\bin\BLL.dll
+E:\vs2013Project\angularJSProj\WebService\bin\DAL.dll
+E:\vs2013Project\angularJSProj\WebService\bin\DBUtility.dll
+E:\vs2013Project\angularJSProj\WebService\bin\Model.dll
+E:\vs2013Project\angularJSProj\WebService\bin\LinkCrm.Common.dll
+E:\vs2013Project\angularJSProj\WebService\bin\FrameWork.dll
+E:\vs2013Project\angularJSProj\WebService\bin\BLL.pdb
+E:\vs2013Project\angularJSProj\WebService\bin\DAL.pdb
+E:\vs2013Project\angularJSProj\WebService\bin\DBUtility.pdb
+E:\vs2013Project\angularJSProj\WebService\bin\Model.pdb

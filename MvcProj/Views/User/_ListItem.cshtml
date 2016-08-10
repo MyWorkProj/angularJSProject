@@ -1,0 +1,19 @@
+﻿@using Webdiyer.WebControls.Mvc
+
+@model List<MvcProj.Models.userinfotb>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@Html.TextBoxFor(model1 => item.name)</td>
+        <td>@Html.TextBoxFor(model1 => item.adress)</td>
+        <td>@Html.TextBoxFor(model1 => item.age)</td>
+        <td>@Html.TextBoxFor(model1 => item.phone)</td>
+        <td>@Html.TextBoxFor(model1 => item.id)</td>
+        <td>
+            <a href="/User/Edit?id=@item.id">edit</a>
+            <a href="/User/delete?id=@item.id">delete</a>
+        </td>
+    </tr>
+}
+
+

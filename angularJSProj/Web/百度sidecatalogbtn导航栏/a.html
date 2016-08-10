@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="css.css">
+
+
+    <div style="width: 800px; margin: auto;">
+        <a id="broker1" name="broker1">&nbsp;</a>
+        <div id="brokerZoneReport" style="min-width: 500px; height: 300px; margin: 10px auto;"></div>
+        <a id="broker2" name="broker2">&nbsp;</a>
+        <div id="brokerDistrictReport" style="min-width: 500px; height: 300px; margin: 10px auto"></div>
+        <a id="broker3" name="broker3">&nbsp;</a>
+        <div id="brokerCareerReport" style="min-width: 500px; height: 300px; margin: 10px auto;"></div>
+        <a id="broker4" name="broker4">&nbsp;</a>
+        <div id="brokerCompanyReport" style="min-width: 500px; height: 300px; margin: 10px auto"></div>
+        <a id="broker5" name="broker5">&nbsp;</a>
+        <div id="brokerNumberOfListingsReport" style="min-width: 500px; height: 300px; margin: 10px auto;"></div>
+        <a id="broker6" name="broker6">&nbsp;</a>
+        <div id="brokerAccreditationReport" style="min-width: 500px; height: 300px; margin: 10px auto"></div>
+        <a id="broker7" name="broker7">&nbsp;</a>
+        <div id="brokerNumberOfTransactionsReport" style="min-width: 500px; height: 300px; margin: 10px auto;"></div>
+        <a id="broker8" name="broker8">&nbsp;</a>
+        <div id="brokerGenderReport" style="min-width: 500px; height: 300px; margin: 10px auto"></div>
+    </div>
+
+    <div id="sideToolbar" class="sideToolbar">
+        <div id="sideCatalog" class="sideCatalogBg"
+             style="visibility: visible;">
+            <div id="sideCatalog-sidebar">
+                <div class="sideCatalog-sidebar-top"></div>
+                <div class="sideCatalog-sidebar-bottom"></div>
+            </div>
+            <div id="sideCatalog-updown" style="visibility: hidden;">
+                <div id="sideCatalog-up" class="sideCatalog-up-enable" title="向上翻页"></div>
+                <div id="sideCatalog-down" class="sideCatalog-down-enable"
+                     title="向下翻页"></div>
+            </div>
+            <div id="sideCatalog-catalog">
+                <dl style="width: 175px; zoom: 1">
+                    <dd class="sideCatalog-item1 highlight" id="sideToolbar-item-0-1">
+                        <span class="sideCatalog-index1">1</span>
+                        <a id="sideToolbar-item-a-1" href="JavaScript:void(0);" class="nslog:1026" title="城区报表">城区报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-2">
+                        <span class="sideCatalog-index1">2</span>
+                        <a id="sideToolbar-item-a-2" href="javascript:void(0);" class="nslog:1026" title="片区报表">片区报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-3">
+                        <span class="sideCatalog-index1">3</span>
+                        <a id="sideToolbar-item-a-3" href="javascript:void(0);" class="nslog:1026" title="职业特长报表">职业特长报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-4">
+                        <span class="sideCatalog-index1">4</span>
+                        <a id="sideToolbar-item-a-4" href="javascript:void(0);" class="nslog:1026" title="公司报表">公司报表</a>
+
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-5">
+                        <span class="sideCatalog-index1">5</span>
+                        <a id="sideToolbar-item-a-5" href="javascript:void(0);" class="nslog:1026" title="房源数报表">房源数报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-6">
+                        <span class="sideCatalog-index1">6</span>
+                        <a id="sideToolbar-item-a-6" href="javascript:void(0);" class="nslog:1026" title="资格认证报表">资格认证报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-7">
+                        <span class="sideCatalog-index1">7</span>
+                        <a id="sideToolbar-item-a-7" href="javascript:void(0);" class="nslog:1026" title="成交数报表">成交数报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item1" id="sideToolbar-item-0-8">
+                        <span class="sideCatalog-index1">8</span>
+                        <a id="sideToolbar-item-a-8" href="javascript:void(0);" class="nslog:1026" title="性别报表">性别报表</a>
+                        <span class="sideCatalog-dot"></span>
+                    </dd>
+                    <!--
+                    <dd class="sideCatalog-item2" id="sideToolbar-item-0-5_1">
+                        <span class="sideCatalog-index2">8.1</span><a href="#5_1"
+                            class="nslog:1026" title="资格认证报表" onclick="return false;">资格认证报表</a><span
+                            class="sideCatalog-dot"></span>
+                    </dd>
+                    <dd class="sideCatalog-item2" id="sideToolbar-item-0-5_2">
+                        <span class="sideCatalog-index2">8.2</span><a href="#5_2"
+                            class="nslog:1026" title="成交数报表" onclick="return false;">成交数报表</a><span
+                            class="sideCatalog-dot"></span>
+                    </dd>
+                     -->
+                </dl>
+            </div>
+        </div>
+        <a id="sideCatalogBtn" href="javascript:void(0);" style="visibility: visible;" class=""></a>
+        <a id="sideToolbar-up" href="javascript:void(0)" style="visibility: visible;" title="回到顶部"></a>
+    </div>
+
+    <script src="../../JS/jquery-1.10.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //让iframe回到顶部    
+            parent.scrollTo(0, 0);
+            initTitleNavigationEvent("broker");
+            // 主页面滚动时，模仿position: fixed;这种功能，因为position: fixed;对于iframe子页面来说不起作用
+            $(parent.window).scroll(function () {
+                $('#sideToolbar').css({
+                    top: $(parent.window).scrollTop() + 116
+                });
+                // 滚动父页面滚动条时相应的切换导航位置，即让导航跟随页面滚动
+                scrollNavlWithHtmlScroll("broker");
+            });
+
+        });
+        /**
+         * 初始化事件
+         */
+        function initTitleNavigationEvent(name) {
+
+            // 添加单击事件
+            $("#sideCatalog-catalog dl dd a").bind('click', { name: name }, function (e) {
+                var id = e.target.id.substring(e.target.id.lastIndexOf("-") + 1, e.target.id.length);
+                quickPositioning(e.data.name + id);
+                $("#sideCatalog-catalog dl dd").removeClass("highlight");
+                $(this).parent().addClass("highlight");
+            });
+
+            // 滚动到顶部
+            $("#sideToolbar-up").bind('click', function (e) {
+                parent.scrollTo(0, 0);
+            });
+
+            // 显示或隐藏导航
+            $("#sideCatalogBtn").bind('click', function (e) {
+                if ($(this).hasClass('sideCatalogBtnDisable')) {
+                    $("#sideCatalog-sidebar").show();
+                    $("#sideCatalog-updown").show();
+                    $("#sideCatalog-catalog").show();
+                    $("#sideCatalogBtn").removeClass("sideCatalogBtnDisable");
+                } else {
+                    $("#sideCatalog-sidebar").hide();
+                    $("#sideCatalog-updown").hide();
+                    $("#sideCatalog-catalog").hide();
+                    $("#sideCatalogBtn").addClass("sideCatalogBtnDisable");
+                }
+            });
+        }
+
+        /**
+         * 滚动到指定位置
+         * @param id 位置id
+         */
+        function quickPositioning(id) {
+            document.getElementById(id).scrollIntoView();
+        }
+
+        /**
+         * 导航跟随页面滚动
+         */
+        function scrollNavlWithHtmlScroll(name) {
+            // 滚动条距离顶端值
+            var wst = $(parent.window).scrollTop();
+            // 加循环
+            for (var i = 1; i <= 8; i++) {
+                // 判断滚动条位置
+                if ($("#" + name + i).offset().top <= wst) {
+                    // 清除高亮
+                    $('#sideCatalog-catalog dl dd').removeClass("highlight");
+                    // 给当前导航加高亮
+                    $("#sideToolbar-item-0-" + i).addClass("highlight");
+                } else {
+                    break;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

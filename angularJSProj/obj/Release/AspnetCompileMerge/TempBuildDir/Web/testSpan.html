@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <span>
+        <input id="inpID1" type="checkbox" value="选择1" checked="checked"/>
+    </span>
+    <span  id="idSpan">111111111</span>
+
+    <span>
+        <input id="inpID2" type="checkbox" value="选择2"/>
+    </span>
+    <span id="idSpan">2222222222</span>
+
+    <button onclick="benClick()">点击1</button>
+    <button onclick="benClick2()">点击2</button>
+    <script>
+        function benClick() {
+            //// 内容
+            //alert("span:=======" + $("#idSpan").html());
+
+            //// 输出为空
+            //alert("span1:=======" + $("#idSpan").val());
+
+            alert("value:" + $("#inpID1").parent().next().html());
+        }
+
+        function benClick2() {
+            alert("value:" + $("#inpID2").parent().next().html());
+        }
+    </script>
+</body>
+</html>

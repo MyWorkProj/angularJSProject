@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../JS/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <button onclick="btnShow()">显示页面</button>
+
+    <button onclick="btnShow2()">显示222</button>
+
+    <input onclick="searchNode()" placeholder="testd"/>
+    <ul id="pageID"></ul>
+    <hr />
+    <ul id="pageID2"></ul>
+
+    <input value="-==========" id="input"/>
+    <button onclick="btnShow3()">显示</button>
+
+    <table>
+        <tr>
+            <td>此处值通过js设置：</td>
+            <td><input id="jsUserName" type="text" name="jsUserName" readonly /></td>
+        </tr>
+        <tr>
+            <td>此处输入值：</td>
+            <td><input id="jsuserName" readonly="readonly" type="text" name="userName"/></td>
+            <td><input id="userName" type="text" name="userName" oninput="change()" /></td>
+        </tr>
+    </table>
+
+    <script>
+        function change() {
+            $("#textarea1").val($("#textareaShow").val());
+        }
+    //$(function () {
+    //    var jsUserName = "";
+    //    if ($.browser.msie)        // IE浏览器
+    //    {
+    //        $("#userName").get(0).onpropertychange = setJsUserName;
+    //        $("#jsUserName").get(0).onpropertychange = handle;
+    //    }
+    //    else        // 其他浏览器
+    //    {
+    //        var intervalName;        // 定时器句柄
+    //        $("#userName").get(0).addEventListener("input", setJsUserName, false);
+    //        // 获得焦点时，启动定时器
+    //        $("#userName").focus(function () {
+    //            intervalName = setInterval(handle, 1000);
+    //        });
+
+    //        // 失去焦点时，清除定时器
+    //        $("#userName").blur(function () {
+    //            clearInterval(intervalName);
+    //        });
+    //    }
+    //    // 设置jsUserName input的值
+    //    function setJsUserName() {
+    //        $("#jsUserName").val($(this).val());
+    //    }
+    //    // jsUserName input的值改变时执行的函数
+    //    function handle() {
+    //        // IE浏览器此处判断没什么意义，但为了统一，且提取公共代码而这样处理。
+    //        if ($("#jsUserName").val() != jsUserName) {
+    //            $("#toolTip").remove();
+    //            $("#jsUserName").parent().append("<span id='toolTip'>看到这里的信息表明，通过js改变input的值也能响应相应事件：<span    style='color:red;'>" + $("#jsUserName").val() + "</span></span>");
+    //            jsUserName = $("#jsUserName").val();
+    //        }
+    //    }
+    //});
+        //$(document).ready(function() {
+        //    for (var i = 0; i < 100; i++) {
+        //        setTimeout("remainTime()", 500);
+        //    }
+            
+        //});
+        function remainTime() {
+            console.log("======:" + $("#input").val());
+            
+        }
+        function btnShow3() {
+            var aaa = $("#input").val();
+            alert(aaa);
+
+           // setTimeout("remainTime()", 1000);
+        }
+
+        function searchNode() {
+            alert("===searchNode=============");
+            var zTree = $.fn.zTree.getZTreeObj("treeOption");
+
+            var key = $.trim($("#bbbb").val());
+            if (key != "" && key != lastKey) {
+                nodeList = zTree.getNodesByParamFuzzy("name", key);
+                for (var i = 0, l = lastNodeList.length; i < l; i++) { //上次查询的节点集合取消高亮
+                    lastNodeList[i].highlight = false;
+                    zTree.updateNode(lastNodeList[i]);
+                }
+                zTree.expandAll(false); //全部收缩
+                if (nodeList.length > 0) {
+                    for (var i = 0, l = nodeList.length; i < l; i++) { //遍历找到的节点集合
+                        if (nodeList[i].getParentNode()) {
+                            zTree.expandNode(nodeList[i].getParentNode(), true, false, false); //展开其父节点
+                        }
+
+                        nodeList[i].highlight = true;
+
+                        zTree.selectNode(nodeList[i], true);
+                        //getFontCss(nodeList[i].id, nodeList[i])
+
+                        zTree.updateNode(nodeList[i]);
+                    }
+                }
+                zTree.refresh(); // 很重要，否则节点状态更新混乱。
+                lastNodeList = nodeList;
+                lastKey = key;
+            }
+        }
+    </script>
+    <script>
+        function btnShow() {
+            var str = PageSplit(3, 11);
+            $("#pageID").html('');
+            $("#pageID").append(str);
+        }
+        function btnShow2() {
+            var str2 = PageSplit2(3, 11);
+            $("#pageID2").html('');
+            $("#pageID2").append(str2);
+        }
+        // 首页 上一页  1,2,3,4 下一页 末页 
+        // 当前第几页 ，数据总数，每页多少数
+        function PageSplit(currentNum, allNum, Count4page) {
+            if (currentNum * Count4page > allNum) {
+                return "";
+            }
+            if (currentNum > allNum) {
+                return "";
+            }
+            if (currentNum <= 0) {
+                return "";
+            }
+            var endPart = " ";
+            if (currentNum == allNum) {
+                endPart += "<li class='disabled'><a href='#' pageindex = '&rsaquo;'>下页</a></li>";
+                endPart += "<li class='disabled'><a href='#' pageindex = '&raquo;'>尾页</a></li>";
+                endPart += "</ul>";
+            } else {
+                endPart += "<li><a href='#" + (currentNum + 1) + "' pageindex = '&rsaquo;'>下页</a></li>";
+                endPart += "<li><a href='#" + allNum + "' pageindex = '&raquo;'>尾页</a></li>";
+                endPart += "</ul>";
+            }
+            //首页 上一页  1,2,3,4 下一页 末页 
+            var middleNum = " ";
+            if (currentNum - 3 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 3) + "'  pageindex='" + (currentNum - 3) + "'> " + (currentNum - 3) + "</a></li>";
+            }
+            if (currentNum - 2 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 2) + "'  pageindex='" + (currentNum - 2) + "'> " + (currentNum - 2) + "</a></li>";
+            }
+            if (currentNum - 1 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 1) + "'  pageindex='" + (currentNum - 1) + "'> " + (currentNum - 1) + "</a></li>";
+            }
+            if (currentNum > 0) {
+                middleNum += "<li style='background-color:red'><a href='#link" + (currentNum) + "'  pageindex='" + (currentNum) + "'> " + (currentNum) + "</a></li>";
+            }
+            var startNum = " ";
+            if (currentNum <= 1) {
+                startNum += "<ul>";
+                startNum += "<li class='disabled'><a href='#' pageindex = '&laquo;'>首页</a></li>";
+                startNum += "<li class='disabled'><a href='#' pageindex = '&lsaquo;'>上页</a></li>";
+            } else {
+                startNum += "<ul>";
+                startNum += "<li><a href='#" + 1 + "' pageindex = '&laquo;'>首页</a></li>";
+                startNum += "<li><a href='#" + (currentNum - 1) + "' pageindex = '&lsaquo;'>上页</a></li>";
+            }
+            return startNum + middleNum + endPart;
+            var rtnString = "<ul class='pagination' id='div_page'>";
+            // 是否第一页，是，则首页，向上翻页按钮不可用
+            if (currentNum <= 1) {
+                rtnString += "<li class='disabled'><a href='#'>&laquo;</a></li>";
+                rtnString += "<li class='disabled'><a href='#'>&lsaquo;</a></li>";
+            }
+                // 不是第一页，则包含回到第一页，向上翻页按钮
+            else {
+                rtnString += "<li><a href='#link" + 1 + "'>&laquo;</a></li>";
+                rtnString += "<li><a href='#link" + (currentNum - 1) + "'>&lsaquo;</a></li>";
+            }
+            //// 判断是否有上2页，有，则添加上2页按钮
+            //if (currentNum - 2 > 0) {
+            //    rtnString += "<li><a href='#link" + (currentNum - 2) + "'>" + (currentNum - 2) + "</a></li>";
+            //}
+            // 判断是否有上一页 
+            if (currentNum - 1 > 0) {
+                rtnString += "<li><a href='#link" + (currentNum - 1) + "'>" + (currentNum - 1) + "</a></li>";
+            }
+            // 显示当前页
+            if (currentNum > 0) {
+                rtnString += "<li class='disabled' style='background-color:red'><a href='#'>" + (currentNum) + "</a></li>";
+            }
+            // 当前页 == 最后一页 添加 下一页，最后一页按钮 后返回
+            if ((currentNum) == allNum) {
+                rtnString += "<li class='disabled'><a href='#'>&rsaquo;</a></li>";
+                rtnString += "<li class='disabled'><a href='#'>&raquo;</a></li>";
+                rtnString += "</ul>";
+                return rtnString;
+            } else {
+                rtnString += "<li><a href='#link" + (currentNum + 1) + "'>...</a></li>";
+                rtnString += "<li><a href='#link" + (allNum) + "'>" + allNum + "</a></li>";
+                rtnString += "<li><a href='#link" + (currentNum + 1) + "'>&rsaquo;</a></li>";
+                rtnString += "<li><a href='#link" + allNum + "'>&raquo;</a></li>";
+                rtnString += "</ul>";
+                return rtnString;
+            }
+        }
+
+        function PageSplit2(currentNum, allNum) {
+            if (currentNum > allNum) {
+                return "";
+            }
+            if (currentNum <= 0) {
+                return "";
+            }
+            var endPart = " ";
+            if (currentNum == allNum) {
+                endPart += "<li class='disabled'><a href='#' pageindex = '0'>&rsaquo;</a></li>";
+                endPart += "<li class='disabled'><a href='#' pageindex = '0'>&raquo;</a></li>";
+                // endPart += "</ul>";
+            } else {
+                endPart += "<li><a href='#" + (currentNum + 1) + "' pageindex = '" + (currentNum + 1) + "'>&rsaquo;</a></li>";
+                endPart += "<li><a href='#" + allNum + "' pageindex = '" + allNum + "'>&raquo;</a></li>";
+                //   endPart += "</ul>";
+            }
+            //首页 上一页  1,2,3,4 下一页 末页
+            var middleNum = " ";
+            if (currentNum - 3 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 3) + "'  pageindex='" + (currentNum - 3) + "'> " + (currentNum - 3) + "</a></li>";
+            }
+            if (currentNum - 2 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 2) + "'  pageindex='" + (currentNum - 2) + "'> " + (currentNum - 2) + "</a></li>";
+            }
+            if (currentNum - 1 > 0) {
+                middleNum += "<li><a href='#link" + (currentNum - 1) + "'  pageindex='" + (currentNum - 1) + "'> " + (currentNum - 1) + "</a></li>";
+            }
+            if (currentNum > 0) {
+                middleNum += "<li><a href='#'  pageindex='" + (currentNum) + "'>" + currentNum + "</a></li>";
+            }
+
+            var startNum = " ";
+            if (currentNum <= 1) {
+                //  startNum += "<ul>";
+                startNum += "<li class='disabled'><a href='#' pageindex = '0'>&laquo;</a></li>";
+                startNum += "<li class='disabled'><a href='#' pageindex = '0'>&lsaquo;</a></li>";
+            } else {
+                //   startNum += "<ul>";
+                startNum += "<li><a href='#" + 1 + "' pageindex = '" + 1 + "'>&laquo;</a></li>";
+                startNum += "<li><a href='#" + (currentNum - 1) + "' pageindex = '" + (currentNum - 1) + "'>&lsaquo;</a></li>";
+            }
+            return startNum + middleNum + endPart;
+
+        }
+    </script>
+</body>
+</html>

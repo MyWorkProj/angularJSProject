@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    aaaaa <time datetime="2.14">===time====</time> ======
+    <track title="===="/>
+    <button onclick="btnShow()">点击</button>
+    
+    
+    <audio controls="controls" id="myaudio">
+    </audio>
+    <script type="text/javascript">
+        //=============播放音频文件==========================
+        function btnShow() {
+            var oAudio = document.getElementById('myaudio');
+            oAudio.src = "%e9%9d%92%e9%b8%9f%e9%a3%9e%e9%b1%bc-%e6%ad%a4%e7%94%9f%e4%b8%8d%e6%8d%a2.mp3";
+            oAudio.play();
+            setTimeout(function () {
+
+                oAudio.pause();
+                alert("===");
+            }, 5000);
+        }
+    </script>
+
+</body>
+
+</html>

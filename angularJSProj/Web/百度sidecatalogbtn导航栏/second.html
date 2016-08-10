@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        
+    </style>
+    <title></title>
+</head>
+<body>
+    <div class="date_app" id="postRightContent" style="height: 725px; margin-bottom: 30px;">
+        <iframe id="rightIframePage" name="rightIframePage" scrolling="no"
+                onload="iFrameHeights();" width="100%;" frameborder="0"
+                src="a.html"></iframe>
+    </div>
+    <script src="../../JS/jquery-1.10.2.min.js"></script>
+    <script>
+        function iFrameHeights() {
+            var ifm = document.getElementById("rightIframePage");
+            ifm.height = 0;
+            var subWeb = document.frames ? document.frames["rightIframePage"].document : ifm.contentDocument;
+            if (ifm != null && subWeb != null) {
+                ifm.height = subWeb.body.scrollHeight;
+                ifm.parentElement.style.height = subWeb.body.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>

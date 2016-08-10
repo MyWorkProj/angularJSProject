@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="angularJSProj.Web.link_curd.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../../CSS/bootstrap.css" rel="stylesheet" />
+    <link href="../../CSS/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script src="../../Scripts/jquery-1.6.4.min.js"></script>
+    <script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="../../assets/js/core/source/App.min.js"></script>
+</body>
+</html>
