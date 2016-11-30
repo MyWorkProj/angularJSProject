@@ -1,5 +1,8 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
     <link href="../../JS/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
     <link href="../../JS/fancybox/source/helpers/jquery.fancybox-buttons.css" rel="stylesheet" />
     <link href="../../JS/fancybox/source/helpers/jquery.fancybox-thumbs.css" rel="stylesheet" />
@@ -13,19 +16,6 @@
 
 
     <script src="../../JS/fancybox/lib/jquery.mousewheel.pack.js"></script>
-</head>
-<body>
-
-    <a href="/Web/框架/frame_aa.html" target="showframe">Frame aa</a><br>
-    <a href="/Web/框架/frame_bb.html" target="showframe">Frame bb</a><br>
-    <a href="/Web/框架/frame_cc.html" target="showframe">Frame cc</a>
-    ===================================================================================
-    <a rel="group" class="group" href="../../phones/p1.jpg" title="原图" target="_self"><img rel="group" style="width:110px;height:110px;" src="../../phones/p1.jpg"></a>
-    <a href="" target="_self"></a>
-    <hr />
-    <!--<img src="yoga.jpg" />
-    <br />-->
-    <iframe src="yoga.jpg"></iframe>
     <script type="text/javascript">
         $(document).ready(function () {
             /*
@@ -39,7 +29,7 @@
 			 */
 
             // Change title type, overlay closing speed
-            $(".group").fancybox({
+            $(".fancybox-effects-a").fancybox({
                 helpers: {
                     title: {
                         type: 'outside'
@@ -51,7 +41,7 @@
             });
 
             // Disable opening and closing animations, change title type
-            $(".group").fancybox({
+            $(".fancybox-effects-b").fancybox({
                 openEffect: 'none',
                 closeEffect: 'none',
 
@@ -202,5 +192,22 @@
 
         });
     </script>
+</head>
+<body>
+    <a class="fancybox-effects-b" href="../../phones/p1.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="../../phones/p1.jpg" alt="" /></a>
+
+    <h3>不同的展示效果</h3>
+    <p>
+        <a class="fancybox-effects-a" href="../../JS/fancybox/demo/5_b.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="../../JS/fancybox/demo/5_s.jpg" alt="" /></a>
+
+        <a class="fancybox-effects-b" href="../../JS/fancybox/demo/5_b.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="../../JS/fancybox/demo/5_s.jpg" alt="" /></a>
+
+        <a class="fancybox-effects-c" href="../../JS/fancybox/demo/5_b.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="../../JS/fancybox/demo/5_s.jpg" alt="" /></a>
+
+        <a class="fancybox-effects-d" href="../../JS/fancybox/demo/5_b.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"><img src="../../JS/fancybox/demo/5_s.jpg" alt="" /></a>
+    </p>
+
+
+    
 </body>
 </html>

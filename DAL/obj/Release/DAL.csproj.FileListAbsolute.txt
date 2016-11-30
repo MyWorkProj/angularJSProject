@@ -9,3 +9,14 @@ E:\vs2013Project\angularJSProj\DAL\bin\DBUtility.pdb
 E:\vs2013Project\angularJSProj\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 E:\vs2013Project\angularJSProj\DAL\obj\Release\DAL.dll
 E:\vs2013Project\angularJSProj\DAL\obj\Release\DAL.pdb
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\DAL.dll.config
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\DAL.dll
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\DAL.pdb
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\DBUtility.dll
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\Model.dll
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\FrameWork.dll
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\Model.pdb
+E:\vs2013Project\angularJSProj\trunk\DAL\bin\DBUtility.pdb
+E:\vs2013Project\angularJSProj\trunk\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+E:\vs2013Project\angularJSProj\trunk\DAL\obj\Release\DAL.dll
+E:\vs2013Project\angularJSProj\trunk\DAL\obj\Release\DAL.pdb

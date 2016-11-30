@@ -4,3 +4,10 @@ E:\vs2013Project\angularJSProj\DBUtility\bin\DBUtility.pdb
 E:\vs2013Project\angularJSProj\DBUtility\bin\FrameWork.dll
 E:\vs2013Project\angularJSProj\DBUtility\obj\Release\DBUtility.dll
 E:\vs2013Project\angularJSProj\DBUtility\obj\Release\DBUtility.pdb
+E:\vs2013Project\angularJSProj\trunk\DBUtility\bin\DBUtility.dll.config
+E:\vs2013Project\angularJSProj\trunk\DBUtility\bin\DBUtility.dll
+E:\vs2013Project\angularJSProj\trunk\DBUtility\bin\DBUtility.pdb
+E:\vs2013Project\angularJSProj\trunk\DBUtility\bin\FrameWork.dll
+E:\vs2013Project\angularJSProj\trunk\DBUtility\obj\Release\DBUtility.csprojResolveAssemblyReference.cache
+E:\vs2013Project\angularJSProj\trunk\DBUtility\obj\Release\DBUtility.dll
+E:\vs2013Project\angularJSProj\trunk\DBUtility\obj\Release\DBUtility.pdb

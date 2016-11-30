@@ -3,3 +3,9 @@ E:\vs2013Project\angularJSProj\Model\bin\Model.dll
 E:\vs2013Project\angularJSProj\Model\bin\Model.pdb
 E:\vs2013Project\angularJSProj\Model\obj\Release\Model.dll
 E:\vs2013Project\angularJSProj\Model\obj\Release\Model.pdb
+E:\vs2013Project\angularJSProj\trunk\Model\bin\Model.dll.config
+E:\vs2013Project\angularJSProj\trunk\Model\bin\Model.dll
+E:\vs2013Project\angularJSProj\trunk\Model\bin\Model.pdb
+E:\vs2013Project\angularJSProj\trunk\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+E:\vs2013Project\angularJSProj\trunk\Model\obj\Release\Model.dll
+E:\vs2013Project\angularJSProj\trunk\Model\obj\Release\Model.pdb
